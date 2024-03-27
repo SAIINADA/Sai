@@ -1,88 +1,9 @@
 <html>
 	<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        #popup-container {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            text-align: center;
-        }
-
-        #close-btn {
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
     </style>
 	</head>
 	<body bgcolor="red">
 	<h1 style= "color:black">Sai, Software Developer</h1>
-<div id="overlay"></div>
-<div id="popup-container">
-    <p>Welcome to our website!</p>
-    <button id="close-btn" onclick="closePopup()">Got it!</button>
-</div>
-
-<script>
-    function setCookie(name, value, days) {
-        const expires = new Date();
-        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
-    }
-
-    function getCookie(name) {
-        const cookies = document.cookie.split('; ');
-        for (const cookie of cookies) {
-            const [cookieName, cookieValue] = cookie.split('=');
-            if (cookieName === name) {
-                return cookieValue;
-            }
-        }
-        return null;
-    }
-
-    function closePopup() {
-        document.getElementById('popup-container').style.display = 'none';
-        document.getElementById('overlay').style.display = 'none';
-        setCookie('welcomePopupShown', 'true', 30); // Set the cookie to expire in 30 days
-    }
-
-    function showPopup() {
-        const welcomePopupShown = getCookie('welcomePopupShown');
-        if (!welcomePopupShown) {
-            document.getElementById('popup-container').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        }
-    }
-
-    window.onload = showPopup;
-</script>
 	<style>
 	img{
 	border : 5px solid #111 ;
